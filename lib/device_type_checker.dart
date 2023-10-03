@@ -1,7 +1,6 @@
 library device_type_checker;
 
 import 'dart:io';
-
 import 'package:device_info_plus/device_info_plus.dart';
 
 class DeviceType {
