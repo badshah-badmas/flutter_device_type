@@ -25,7 +25,7 @@ class DeviceType {
     } else if (Platform.isIOS) {
       DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
       IosDeviceInfo iosDeviceInfo = await deviceInfo.iosInfo;
-      return iosDeviceInfo.model.contains('iPad');
+      return iosDeviceInfo.model?.contains('iPad') ?? false;
     }
     return false;
   }
@@ -40,7 +40,7 @@ class DeviceType {
     } else if (Platform.isIOS) {
       DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
       IosDeviceInfo iosDeviceInfo = await deviceInfo.iosInfo;
-      return iosDeviceInfo.model.contains('ios');
+      return iosDeviceInfo.model?.contains('ios') ?? false;
     }
     return false;
   }
